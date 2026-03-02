@@ -21,7 +21,7 @@ docker start <container_id>
 //remove a container
 docker rm <container_id>
 
-//remove all containers ***ต้องระวังมันลบ server ทุกอย่าง***
+//remove all containers
 docker system prune
 
 //nginx server
@@ -33,3 +33,11 @@ docker run -it <image_name or container_id> sh
 //cat file inside container
 cat filename.txt
 
+
+docker run -p 80:80 nginx
+
+foreground mode
+docker run -p 9000:80 nginx
+
+//detached mode
+docker run -d -p 9100:80 nginx
